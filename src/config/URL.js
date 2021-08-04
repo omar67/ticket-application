@@ -1,1 +1,1 @@
-export const backendURL = "http://127.0.0.1:1234";
+export const backendURL = "https://my-ticket-api-dev.herokuapp.com";
