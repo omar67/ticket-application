@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Valid(props) {
-  let { title, description, price, qr } = props.props.ticket;
+  let { title, description, price, qr } = props.ticket;
   return (
     <div>
       <table>
