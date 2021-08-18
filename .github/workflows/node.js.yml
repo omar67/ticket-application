@@ -21,6 +21,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Set GitHub Actions as Commit Author
+      run: |
+        git config --global user.name github-actions
+        git config --global user.email github-actions@github.com
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
