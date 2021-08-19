@@ -132,7 +132,7 @@ export default function Register(props) {
             </Button>
             <Grid container>
               <Grid item>
-                <Link component={RouterLink} to="/login" variant="body">
+                <Link component={RouterLink} to="/login">
                   Don't have an account?
                 </Link>
               </Grid>

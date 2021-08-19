@@ -52,10 +52,8 @@ export default function Login(props) {
       .then((json) => {
         setIsLoading(false);
         if (json.token) {
-          //   props.onTokenChanged(json.token);
           window.localStorage.setItem("token", json.token);
-          const token = window.localStorage.getItem("token");
-          console.log("Token saved", token);
+          console.log("Token saved");
           const ticketID = window.localStorage.getItem("ticket");
           if (ticketID) history.push(`/ticket/${ticketID}`);
           else history.push(`/`);
@@ -123,7 +121,7 @@ export default function Login(props) {
             </Button>
             <Grid container>
               <Grid item>
-                <Link component={RouterLink} to="/register" variant="body">
+                <Link component={RouterLink} to="/register">
                   Don't have an account?
                 </Link>
               </Grid>

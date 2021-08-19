@@ -6,15 +6,11 @@ import Register from "./Register";
 
 export default function AccessControl(props) {
   const [tab, setTab] = useState(props.tab);
-
   const [user, setUser] = useState({ name: "", username: "", password: "" });
-  //   const [password, setPassword] = useState();
 
   useEffect(() => {
     setTab(props.tab);
   }, [props.tab]);
-  // const [token, setToken] = useState()
-  // const [ticket, setTicket] = useState()
 
   return (
     <div>

@@ -12,19 +12,21 @@ export default function Ticket(props) {
   const history = useHistory();
 
   useEffect(() => {
-    var token = window.localStorage.getItem("token");
-    console.log("token: ", token);
+    const token = window.localStorage.getItem("token");
+
+    if (id !== undefined) {
+      window.localStorage.setItem("ticket", id);
+    }
     if (token === null) {
       console.log("redirected to login from ticket");
       history.push("/login");
+      return;
     }
-    if (id !== undefined) {
-      window.localStorage.setItem("ticket", id);
-      socket.emit("join", { ticket: id, token });
-    }
+    if (token && id) socket.emit("join", { ticket: id, token });
 
+    if (socket.disconnected) socket.connect();
     socket.on("update ticket", (msg) => {
-      console.log("msg received", msg);
+      console.log("msg received");
       socket.emit("request", { ticket: id, token });
     });
     socket.on("ticket", (ticket) => {
@@ -37,6 +39,12 @@ export default function Ticket(props) {
       setTicket(ticket);
       setIsLoading(false);
     });
+    return () => {
+      socket.emit("leave", id); // leave room
+      socket.off("ticket");
+      socket.off("update ticket");
+      socket.disconnect();
+    };
   }, [id, history]);
 
   if (isLoading) return <h1>Loading Ticket...</h1>;
