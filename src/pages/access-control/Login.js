@@ -9,8 +9,8 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { useState } from "react";
-
-import { Link, useHistory } from "react-router-dom";
+import { Link as RouterLink, useHistory } from "react-router-dom";
+import { Link } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -123,7 +123,7 @@ export default function Login(props) {
             </Button>
             <Grid container>
               <Grid item>
-                <Link to="/register" variant="body2">
+                <Link component={RouterLink} to="/register" variant="body">
                   Don't have an account?
                 </Link>
               </Grid>

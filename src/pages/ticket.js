@@ -9,7 +9,6 @@ export default function Ticket(props) {
   const [isLoading, setIsLoading] = React.useState(true);
 
   let { id } = useParams();
-
   const history = useHistory();
 
   useEffect(() => {
@@ -38,7 +37,7 @@ export default function Ticket(props) {
       setTicket(ticket);
       setIsLoading(false);
     });
-  }, []);
+  }, [id, history]);
 
   if (isLoading) return <h1>Loading Ticket...</h1>;
   else
