@@ -1,5 +1,10 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
 import React from "react";
 import Error404 from "./pages/404";
 import Ticket from "./pages/ticket";
@@ -11,23 +16,25 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Router>
-          <Switch>
-            <Route path="/" exact="true">
-              <Home />
-            </Route>
-            <Route path="/login">
-              <AccessControl tab={"login"} />
-            </Route>
-            <Route path="/register">
-              <AccessControl tab={"register"} />
-            </Route>
-            <Route path="/ticket/:id">
-              <Ticket />
-            </Route>
-            <Route path="*">
-              <Error404 />
-            </Route>
-          </Switch>
+          <BrowserRouter basename="/ticket-application">
+            <Switch>
+              <Route path="/" exact="true">
+                <Home />
+              </Route>
+              <Route path="/login">
+                <AccessControl tab={"login"} />
+              </Route>
+              <Route path="/register">
+                <AccessControl tab={"register"} />
+              </Route>
+              <Route path="/ticket/:id">
+                <Ticket />
+              </Route>
+              <Route path="*">
+                <Error404 />
+              </Route>
+            </Switch>
+          </BrowserRouter>
         </Router>
       </header>
     </div>
