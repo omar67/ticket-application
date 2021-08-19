@@ -32,7 +32,7 @@ export default function Ticket(props) {
       if (ticket.error && ticket.error === "Unauthorized Access!") {
         // clear local storage
         localStorage.removeItem("token");
-        history.push("login");
+        history.push("/login");
       }
       setTicket(ticket);
       setIsLoading(false);
