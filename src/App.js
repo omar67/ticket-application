@@ -1,11 +1,5 @@
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  BrowserRouter,
-  HashRouter,
-} from "react-router-dom";
+import { Switch, Route, HashRouter } from "react-router-dom";
 import React from "react";
 import Error404 from "./pages/404";
 import Ticket from "./pages/ticket";
