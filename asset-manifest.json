@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/ticket-application/static/css/main.a617e044.chunk.css",
-    "main.js": "/ticket-application/static/js/main.392b4512.chunk.js",
-    "main.js.map": "/ticket-application/static/js/main.392b4512.chunk.js.map",
+    "main.js": "/ticket-application/static/js/main.b5ea05fe.chunk.js",
+    "main.js.map": "/ticket-application/static/js/main.b5ea05fe.chunk.js.map",
     "runtime-main.js": "/ticket-application/static/js/runtime-main.91616aa9.js",
     "runtime-main.js.map": "/ticket-application/static/js/runtime-main.91616aa9.js.map",
-    "static/js/2.a9c6d8c0.chunk.js": "/ticket-application/static/js/2.a9c6d8c0.chunk.js",
-    "static/js/2.a9c6d8c0.chunk.js.map": "/ticket-application/static/js/2.a9c6d8c0.chunk.js.map",
+    "static/js/2.e0850901.chunk.js": "/ticket-application/static/js/2.e0850901.chunk.js",
+    "static/js/2.e0850901.chunk.js.map": "/ticket-application/static/js/2.e0850901.chunk.js.map",
     "static/js/3.2bd199af.chunk.js": "/ticket-application/static/js/3.2bd199af.chunk.js",
     "static/js/3.2bd199af.chunk.js.map": "/ticket-application/static/js/3.2bd199af.chunk.js.map",
     "index.html": "/ticket-application/index.html",
     "static/css/main.a617e044.chunk.css.map": "/ticket-application/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.a9c6d8c0.chunk.js.LICENSE.txt": "/ticket-application/static/js/2.a9c6d8c0.chunk.js.LICENSE.txt"
+    "static/js/2.e0850901.chunk.js.LICENSE.txt": "/ticket-application/static/js/2.e0850901.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.91616aa9.js",
-    "static/js/2.a9c6d8c0.chunk.js",
+    "static/js/2.e0850901.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.392b4512.chunk.js"
+    "static/js/main.b5ea05fe.chunk.js"
   ]
 }
