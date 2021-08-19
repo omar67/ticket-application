@@ -38,7 +38,7 @@ export default function Ticket(props) {
       setTicket(ticket);
       setIsLoading(false);
     });
-  });
+  }, []);
 
   if (isLoading) return <h1>Loading Ticket...</h1>;
   else
