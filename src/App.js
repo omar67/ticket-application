@@ -4,6 +4,7 @@ import {
   Switch,
   Route,
   BrowserRouter,
+  HashRouter,
 } from "react-router-dom";
 import React from "react";
 import Error404 from "./pages/404";
@@ -15,27 +16,25 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Router>
-          <BrowserRouter basename="/ticket-application">
-            <Switch>
-              <Route path="/" exact="true">
-                <Home />
-              </Route>
-              <Route path="/login">
-                <AccessControl tab={"login"} />
-              </Route>
-              <Route path="/register">
-                <AccessControl tab={"register"} />
-              </Route>
-              <Route path="/ticket/:id">
-                <Ticket />
-              </Route>
-              <Route path="*">
-                <Error404 />
-              </Route>
-            </Switch>
-          </BrowserRouter>
-        </Router>
+        <HashRouter basename="/ticket-application">
+          <Switch>
+            <Route path="/" exact="true">
+              <Home />
+            </Route>
+            <Route path="/login">
+              <AccessControl tab={"login"} />
+            </Route>
+            <Route path="/register">
+              <AccessControl tab={"register"} />
+            </Route>
+            <Route path="/ticket/:id">
+              <Ticket />
+            </Route>
+            <Route path="*">
+              <Error404 />
+            </Route>
+          </Switch>
+        </HashRouter>
       </header>
     </div>
   );
