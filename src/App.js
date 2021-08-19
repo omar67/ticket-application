@@ -15,10 +15,10 @@ const theme = createTheme({
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <HashRouter basename="/ticket-application">
-          <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <header className="App-header">
+          <HashRouter basename="ticket-application">
             <Switch>
               <Route path="/" exact="true">
                 <Home />
@@ -36,10 +36,10 @@ function App() {
                 <Error404 />
               </Route>
             </Switch>
-          </ThemeProvider>
-        </HashRouter>
-      </header>
-    </div>
+          </HashRouter>
+        </header>
+      </div>
+    </ThemeProvider>
   );
 }
 
